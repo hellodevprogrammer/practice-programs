@@ -56,11 +56,11 @@ public class SortSearch {
             }
             else if(matrix[rmid][cmid] > target)
             {
-                rend = rmid-1;
+                rend = rmid;
             }
             else
             {
-                rstart = rmid+1;
+                rstart = rmid;
             }
         }
         if(matrix[rend][cmid] == target)

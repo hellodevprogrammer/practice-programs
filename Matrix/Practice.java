@@ -3,7 +3,11 @@ import java.util.Arrays;
 
 public class Practice {
     public static void main(String[] args) {
-        
+        int x[][] = {{1,2,3},{4,5,6},{7,8,9}};
+           rotate(x);
+        // for (int[] is : y) {
+        //     System.out.println(Arrays.toString(is));
+        // }
         // String s = "0000001311110111111000";
         // int a[] ={3,0,1};
         // int a1[]={-8 ,-3 ,-3 ,-2, 0 ,1, 2 ,2 ,6};
@@ -17,11 +21,25 @@ public class Practice {
         // rotate2(a, 2);
         // moveZeroes(a);
         // System.out.println(missingNumber(a));
-          int x[] = {16,17,4,3,5,2};  
+        //   int x[] = {16,17,4,3,5,2};  
         //  System.out.println(maxProfit(x));
     //    System.out.println(pairWithMaxSum(x));
     // System.out.println(Arrays.toString(rearrangeArray(x)));
-    System.out.println(leaders(x, x.length));
+    // System.out.println(leaders(x, x.length));
+     }
+     public static void rotate(int[][] matrix) {
+        int newMatrix[][] = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                newMatrix[j][matrix.length -1 -i] = matrix[i][j];
+            }
+        }
+        for (int i = 0; i < newMatrix.length; i++) {
+            for (int j = 0; j < newMatrix.length; j++) {
+                matrix[i][j] = newMatrix[i][j];
+            }
+        }
+        
      }
      public static ArrayList<Integer> reverseArrayList(ArrayList<Integer> alist)
      {
